@@ -64,10 +64,10 @@ export const EditorPreview = ({ videoRefs, audioRefs }: Props) => {
           stepBackward();
           break;
         case e.code === 'ArrowRight' && e.shiftKey:
-          jumpForward(5);
+          jumpForward(10);
           break;
         case e.code === 'ArrowLeft' && e.shiftKey:
-          jumpBackward(5);
+          jumpBackward(10);
           break;
       }
     };
@@ -81,7 +81,7 @@ export const EditorPreview = ({ videoRefs, audioRefs }: Props) => {
     <div
       className="flex-1 flex flex-col items-center justify-center h-full w-full
       bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)]
-      bg-[size:24px_24px] relative"
+      bg-size-[24px_24px] relative"
     >
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         {activeVideoClip ? (
@@ -126,7 +126,7 @@ export const EditorPreview = ({ videoRefs, audioRefs }: Props) => {
         })}
       </div>
 
-      <div className="w-full px-4 opacity-0 hover:opacity-100 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-md absolute bottom-0 left-0">
+      <div className="w-full px-4 opacity-0 hover:opacity-100 bg-linear-to-t from-black/80 to-transparent backdrop-blur-md absolute bottom-0 left-0">
         <input
           type="range"
           min={0}

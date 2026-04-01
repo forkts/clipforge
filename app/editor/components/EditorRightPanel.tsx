@@ -221,7 +221,7 @@ export const EditorRightPanel = React.memo(({ onClose, videoRefs, audioRefs, zip
               <Button
                 variant="secondary"
                 size="sm"
-                className="flex-1 min-w-[130px] text-xs flex gap-2"
+                className="flex-1 min-w-32.5 text-xs flex gap-2"
                 onClick={() => handleAction(file, clipDetails.id, 'thumbnail', 5)}
                 disabled={isProcessing}
               >
@@ -231,7 +231,7 @@ export const EditorRightPanel = React.memo(({ onClose, videoRefs, audioRefs, zip
               <Button
                 variant="secondary"
                 size="sm"
-                className="flex-1 min-w-[130px] text-xs flex gap-2"
+                className="flex-1 min-w-32.5 text-xs flex gap-2"
                 onClick={() => handleAction(file, clipDetails.id, 'audio', metadata?.duration)}
                 disabled={isProcessing}
               >
@@ -241,7 +241,7 @@ export const EditorRightPanel = React.memo(({ onClose, videoRefs, audioRefs, zip
               <Button
                 variant="secondary"
                 size="sm"
-                className="flex-1 min-w-[130px] text-xs flex gap-2"
+                className="flex-1 min-w-32.5 text-xs flex gap-2"
                 onClick={() => handleAction(file, clipDetails.id, 'mute', metadata?.duration)}
                 disabled={isProcessing}
               >

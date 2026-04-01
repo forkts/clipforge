@@ -30,7 +30,7 @@ export function EditorTimeline({ videoRefs, audioRefs, showTimeline, onToggleTim
   const containerRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
   const currentSidebarWidth = isMobile ? 128 : 192;
-  
+
   const { seek } = usePlaybackEngine({ videoRefs, audioRefs });
   const { timeToPixels, pixelsToTime } = createTimeMapping(zoom);
   const visible = useVisibleRange(scrollLeft, containerWidth, pixelsToTime);
@@ -78,7 +78,7 @@ export function EditorTimeline({ videoRefs, audioRefs, showTimeline, onToggleTim
           className="flex flex-row relative min-h-full bg-background
           bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),
           linear-gradient(to_bottom,#80808012_1px,transparent_1px)]
-          bg-[size:24px_24px]"
+          bg-size-[24px_24px]"
           style={{
             minWidth: '100%',
             width: timeToPixels(duration) + currentSidebarWidth,
@@ -86,9 +86,9 @@ export function EditorTimeline({ videoRefs, audioRefs, showTimeline, onToggleTim
         >
           {/* Sidebar */}
           {openTrackSideBar && (
-            <div 
+            <div
               style={{ width: currentSidebarWidth }}
-              className="sticky left-0 shrink-0 border-r border-border bg-background z-[60] flex flex-col pt-6"
+              className="sticky left-0 shrink-0 border-r border-border bg-background z-60 flex flex-col pt-6"
             >
               <TimelineTrackSidebar />
             </div>
@@ -97,17 +97,17 @@ export function EditorTimeline({ videoRefs, audioRefs, showTimeline, onToggleTim
           {/* Tracks */}
           <div className="flex-1 relative flex flex-col mx-1">
             {/* Ruler */}
-            <div className="sticky top-0 z-[70] bg-background">
+            <div className="sticky top-0 z-70 bg-background">
               <TimelineRuler duration={duration} timeToPx={timeToPixels} pxToTime={pixelsToTime} onSeek={seek} />
 
               {/* PlayHead handle */}
               <div
-                className="absolute top-0 h-full w-0 z-[80] pointer-events-none"
+                className="absolute top-0 h-full w-0 z-80 pointer-events-none"
                 style={{
                   transform: `translateX(${timeToPixels(currentTime)}px)`,
                 }}
               >
-                <div className="absolute top-0 -translate-x-1/2 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent border-t-red-500 shadow-sm" />
+                <div className="absolute top-0 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-10 border-l-transparent border-r-transparent border-t-red-500 shadow-sm" />
               </div>
             </div>
 
@@ -130,7 +130,7 @@ export function EditorTimeline({ videoRefs, audioRefs, showTimeline, onToggleTim
 
               {/* PlayHead line */}
               <div
-                className="absolute top-0 bottom-0 w-[2px] bg-red-500 z-50 pointer-events-none"
+                className="absolute top-0 bottom-0 w-0.5 bg-red-500 z-50 pointer-events-none"
                 style={{
                   transform: `translateX(${timeToPixels(currentTime)}px)`,
                 }}
