@@ -16,7 +16,7 @@
 [![Status](https://img.shields.io/badge/status-in%20development-orange)](#roadmap)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-[Live Demo](#) · [Report a Bug](https://github.com/arijitchhatui/clipforge/issues) · [Request a Feature](https://github.com/arijitchhatui/clipforge/issues)
+[Live Demo](#) · [Report a Bug](https://github.com/forkts/clipforge/issues) · [Request a Feature](https://github.com/forkts/clipforge/issues)
 
 </div>
 
@@ -178,7 +178,7 @@ clipforge/
 
 ```bash
 # Clone the repo
-git clone https://github.com/arijitchhatui/clipforge.git
+git clone https://github.com/forkts/clipforge.git
 cd clipforge
 
 # Install dependencies
@@ -214,7 +214,7 @@ ClipForge requires a modern browser with **WebAssembly** and **SharedArrayBuffer
 
 ## Roadmap
 
-See the [open issues](https://github.com/arijitchhatui/clipforge/issues) for a full list of planned features and known bugs.
+See the [open issues](https://github.com/forkts/clipforge/issues) for a full list of planned features and known bugs.
 
 High-priority milestones:
 
