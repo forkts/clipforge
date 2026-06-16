@@ -97,11 +97,11 @@ export const EditorLeftPanel = React.memo(({ activeTab, setActiveTab }: LeftPane
       </div>
 
       {carouselIndex !== null && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 m-0 overflow-hidden">
+        <div className="fixed inset-0 z-25 flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 m-0 overflow-hidden">
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-6 right-6 text-white/50 hover:text-white hover:bg-white/10 z-[150]"
+            className="absolute top-6 right-6 text-white/50 hover:text-white hover:bg-white/10 z-37.5"
             onClick={() => setCarouselIndex(null)}
           >
             <X size={32} />

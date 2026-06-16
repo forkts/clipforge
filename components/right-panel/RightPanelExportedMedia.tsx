@@ -82,9 +82,9 @@ export const RightPanelExportedMedia = ({ onCancel, clipId, zip }: RightPanelExp
           <Download size={18} />
           {exportedMedia.filter((m) => m.selected).length > 1 ? 'Download as ZIP' : 'Download'}
         </Button>
-        <div className="w-full flex flex-col items-center justify-center bg-black/5 rounded-xl mb-10 overflow-hidden min-h-[300px] border border-dashed border-muted-foreground/20 relative">
+        <div className="w-full flex flex-col items-center justify-center bg-black/5 rounded-xl mb-10 overflow-hidden min-h-75 border border-dashed border-muted-foreground/20 relative">
           {(exportedMedia[0].type === FileType.Image || exportedMedia[0].type === FileType.Video) && (
-            <div className="w-full h-[300px]">
+            <div className="w-full h-75">
               <Carousel
                 items={exportedMedia}
                 initialIndex={activeIndex}
